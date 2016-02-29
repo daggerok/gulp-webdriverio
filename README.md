@@ -16,6 +16,7 @@ supported browsers:
 
 ```shell
 npm test
+npm e2e:report
 ```
 
 **Note 2**
@@ -26,7 +27,11 @@ links:
 
 - http://webdriver.io/guide/plugins/gulp-webdriver.html
 
+- https://www.npmjs.com/package/selenium-standalone
+
 - https://github.com/senchalabs/connect
+
+- http://allure.qatools.ru
 
 - http://gulpjs.com
 

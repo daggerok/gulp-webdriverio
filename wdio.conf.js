@@ -9,11 +9,11 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/**/*.spec.js'
+        './test/**/*.spec.js',
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        // 'path/to/excluded/files',
     ],
     //
     // ============
@@ -33,7 +33,7 @@ exports.config = {
     // }],
     capabilities: [
         {browserName: 'phantomjs'},
-        // {browserName: 'chrome'}, // also will works
+        {browserName: 'chrome'}, // also should works
     ],
     //
     // ===================
@@ -49,7 +49,7 @@ exports.config = {
     coloredLogs: true,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: 'dist/e2errors',
+    screenshotPath: './dist',
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", the base url gets prepended.
@@ -77,7 +77,7 @@ exports.config = {
     //         screenshotRoot: 'my-shots',
     //         failedComparisonsRoot: 'diffs',
     //         misMatchTolerance: 0.05,
-    //         screenWidth: [320,480,640,1024]
+    //         screenWidth: [320,480,640,1024],
     //     },
     //     webdriverrtc: {},
     //     browserevent: {}
@@ -99,12 +99,9 @@ exports.config = {
     // Test reporter for stdout.
     // The following are supported: dot (default), spec and xunit
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: [
-        'dot',
-        'allure'
-    ],
+    reporters: ['dot', 'allure'],
     reporterOptions: {
-        outputDir: 'dist/e2result',
+        outputDir: './dist',
     },
     
     //
@@ -112,7 +109,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        compilers: ['js:babel-core/register']
+        compilers: ['js:babel-core/register'],
     },
     //
     // =====
@@ -124,13 +121,13 @@ exports.config = {
     // resolved to continue.
     //
     // Gets executed once before all workers get launched.
-    onPrepare: function (config, capabilities) {
-    },
+    // onPrepare: function (config, capabilities) {
+    // },
     //
     // Gets executed before test execution begins. At this point you can access to all global
     // variables like `browser`. It is the perfect place to define custom commands.
-    before: function (capabilties, specs) {
-    },
+    // before: function (capabilties, specs) {
+    // },
     //
     // Hook that gets executed before the suite starts
     // beforeSuite: function (suite) {
@@ -168,11 +165,11 @@ exports.config = {
     //
     // Gets executed after all tests are done. You still have access to all global variables from
     // the test.
-    after: function (capabilties, specs) {
-    },
+    // after: function (capabilties, specs) {
+    // },
     //
     // Gets executed after all workers got shut down and the process is about to exit. It is not
     // possible to defer the end of the process using a promise.
-    onComplete: function(exitCode) {
-    }
+    // onComplete: function(exitCode) {
+    // }
 }
