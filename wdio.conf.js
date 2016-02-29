@@ -1,5 +1,4 @@
 exports.config = {
-    
     //
     // ==================
     // Specify Test Files
@@ -32,9 +31,10 @@ exports.config = {
     // capabilities: [{
     //     browserName: 'firefox'
     // }],
-    capabilities: [{
-        browserName: 'phantomjs'
-    }],
+    capabilities: [
+        {browserName: 'phantomjs'},
+        // {browserName: 'chrome'}, // also will works
+    ],
     //
     // ===================
     // Test Configurations
@@ -42,13 +42,14 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'verbose',
+    // logLevel: 'verbose',
+    logLevel: 'silent',
     //
     // Enables colors for log output.
     coloredLogs: true,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: './dist/e2errors',
+    screenshotPath: 'dist/e2errors',
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", the base url gets prepended.
@@ -98,7 +99,13 @@ exports.config = {
     // Test reporter for stdout.
     // The following are supported: dot (default), spec and xunit
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: ['allure'],
+    reporters: [
+        'dot',
+        'allure'
+    ],
+    reporterOptions: {
+        outputDir: 'dist/e2result',
+    },
     
     //
     // Options to be passed to Mocha.
