@@ -1,0 +1,58 @@
+{
+  "name": "gulp-webdriverio",
+  "version": "1.0.0",
+  "description": "e2e testing using gulp, webdriverio and selenium",
+  "main": "test/main.spec.js",
+  "private": true,
+  "engines": {
+    "node": ">=5",
+    "npm": ">=3"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "pregulp": "npm install",
+    "pretest": "npm run kill",
+    "test": "npm run gulp test",
+    "kill": "killall java || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daggerok/gulp-webdriverio.git"
+  },
+  "keywords": [
+    "e2e",
+    "gulp-babel",
+    "connect",
+    "gulp-webdriver",
+    "webdriverio",
+    "selenium",
+    "phantomjs"
+  ],
+  "author": "Maksim Kostromin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daggerok/gulp-webdriverio/issues"
+  },
+  "homepage": "https://github.com/daggerok/gulp-webdriverio#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.5.0",
+    "chai": "^3.5.0",
+    "connect": "^3.4.1",
+    "gulp": "^3.9.1",
+    "gulp-webdriver": "^1.0.3",
+    "mocha": "^2.4.5",
+    "phantomjs-prebuilt": "^2.1.4",
+    "request": "^2.69.0",
+    "require-dir": "^0.3.0",
+    "selenium-standalone": "^5.0.0",
+    "serve-static": "^1.10.2",
+    "wdio-allure-reporter": "0.0.2",
+    "wdio-mocha-framework": "^0.2.11",
+    "webdriverio": "^4.0.3"
+  }
+}
