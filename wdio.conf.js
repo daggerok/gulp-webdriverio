@@ -99,7 +99,7 @@ exports.config = {
     // Test reporter for stdout.
     // The following are supported: dot (default), spec and xunit
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: ['dot', 'allure'],
+    reporters: ['dot'],
     reporterOptions: {
         outputDir: './dist',
     },

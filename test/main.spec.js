@@ -1,22 +1,21 @@
 import assert from 'assert'
-import 'webdriverio'
 
 describe('the index page', () => {
   const expectedTitle = 'e2e testing using gulp, webdriverio and selenium'
 
   it('has correct title (oldstyle callbacks)', (done) => {
-    browser.url('/').getTitle().then((title) => {
+    browser.url('/').getTitle().then(title => {
       assert.equal(title, expectedTitle, `has wrong title: ${expectedTitle}`)
     })
-    done()
+    return done()
   })
 
   it('has correct title (using promises)', () => {
-    return browser.url('/').getTitle().then((title) => assert.equal(title, expectedTitle, `has wrong title: ${expectedTitle}`))
+    return browser.url('/').getTitle().then(title => assert.equal(title, expectedTitle, `has wrong title: ${expectedTitle}`))
   })
 
   it('has correct title (using generators)', function* () {
-    yield browser.url('/') // require babel-plugin-transform-runtime see package.json
+    yield browser.url('/') // require babel plugin: transform-runtime (see package.json)
 
     let title = yield browser.getTitle()
 

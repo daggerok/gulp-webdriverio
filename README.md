@@ -16,7 +16,6 @@ supported browsers:
 
 ```shell
 npm test
-npm e2e:report
 ```
 
 **Note 2**
