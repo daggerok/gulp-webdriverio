@@ -1,7 +1,7 @@
 import assert from 'assert'
 
 describe('the index page', () => {
-  const expectedTitle = 'e2e testing using gulp, webdriverio and selenium'
+  const expectedTitle = 'e2e testing using gulp-babel, webdriverio and selenium'
 
   it('has correct title (oldstyle callbacks)', (done) => {
     browser.url('/').getTitle().then(title => {

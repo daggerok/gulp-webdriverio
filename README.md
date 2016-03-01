@@ -1,13 +1,17 @@
 gulp-webdriverio [![build](https://travis-ci.org/daggerok/gulp-webdriverio.svg?branch=master)](https://travis-ci.org/daggerok/gulp-webdriverio)
 ================
 
-fully automated e2e testing written on es6, using node, gulp, webdriverio and selenium
+fully automated e2e testing written on es6, using node, gulp-babel, webdriverio and selenium
 
 supported browsers:
 
 - phantomjs
 
+- firefox
+
 - chrome
+
+- safari
 
 
 **Note 1**
@@ -29,8 +33,6 @@ links:
 - https://www.npmjs.com/package/selenium-standalone
 
 - https://github.com/senchalabs/connect
-
-- http://allure.qatools.ru
 
 - http://gulpjs.com
 
