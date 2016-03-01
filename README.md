@@ -1,5 +1,5 @@
-gulp-babel-es6-livereload [![build](https://travis-ci.org/daggerok/gulp-babel-es6-livereload.svg?branch=master)](https://travis-ci.org/daggerok/gulp-babel-es6-livereload)
-=========================
+gulp-webdriverio [![build](https://travis-ci.org/daggerok/gulp-webdriverio.svg?branch=master)](https://travis-ci.org/daggerok/gulp-webdriverio)
+================
 
 fully automated e2e testing written on es6, using node, gulp, webdriverio and selenium
 
